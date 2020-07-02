@@ -9,7 +9,7 @@ Compiles in Visual Studio 2017. Haven't tested later versions but should work. B
 ## Banjo's Backpack v2a006
 If you need the folders mentioned in the Project Requirements section head to the link below and grab them from the Banjo's Backpack folder after extracting the zip.
 
-https://www.romhacking.net/utilities/1097/
+https://gamebanana.com/tools/6770
 
 ## Banjo Kazooie Globalizer Source Code
 This isn't a requirement to compile and run Banjo's Backpack. It's a plugin utility BB uses to allow level-specific assets to be used anywhere in the game. Here you can find the source code just in case modifications need to be made due to bugs or whatever.
