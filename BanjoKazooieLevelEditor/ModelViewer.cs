@@ -1576,7 +1576,7 @@ namespace BanjoKazooieLevelEditor
       this.stop_btn.BackColor = Color.Transparent;
       this.stop_btn.FlatAppearance.BorderSize = 0;
       this.stop_btn.FlatStyle = FlatStyle.Flat;
-      this.stop_btn.Image = (Image) componentResourceManager.GetObject("stop_btn.Image");
+      this.stop_btn.Image = Tool.ModelViewer.stop_btn;
       this.stop_btn.Location = new Point(745, 2);
       this.stop_btn.Margin = new Padding(0);
       this.stop_btn.Name = "stop_btn";
@@ -1635,7 +1635,7 @@ namespace BanjoKazooieLevelEditor
       this.Controls.Add((Control) this.CamSpeed_tb);
       this.Controls.Add((Control) this.menuStrip1);
       this.MainMenuStrip = this.menuStrip1;
-      this.Name = nameof (ModelViewer);
+      this.Name = "ModelViewer";
       this.ShowIcon = false;
       this.Text = "Model Viewer";
       this.FormClosing += new FormClosingEventHandler(this.ModelViewer_FormClosing);

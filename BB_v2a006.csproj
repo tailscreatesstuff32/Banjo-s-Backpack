@@ -60,6 +60,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BanjoKazooieLevelEditor\ModelImportForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelImportForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BanjoKazooieLevelEditor\ModelViewer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelViewer.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BanjoKazooieLevelEditor\SNSEditor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SNSEditor.resx</DependentUpon>
+    </Compile>
     <Compile Include="RummageAttributes\RummageNoRemoveAttribute.cs" />
     <Compile Include="RummageAttributes\RummageNoRenameAttribute.cs" />
     <Compile Include="RummageAttributes\RummageNoRenameAnythingAttribute.cs" />
@@ -414,8 +429,16 @@
     <EmbeddedResource Include="BanjoKazooieLevelEditor\Form1.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\GeneralSettings.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\MidiToolForm.resx" />
-    <EmbeddedResource Include="BanjoKazooieLevelEditor\ModelImportForm.resx" />
-    <EmbeddedResource Include="BanjoKazooieLevelEditor\ModelViewer.resx" />
+    <EmbeddedResource Include="BanjoKazooieLevelEditor\ModelImportForm.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ModelImportForm.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Tool</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BanjoKazooieLevelEditor\ModelViewer.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ModelViewer.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Tool</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Include="BanjoKazooieLevelEditor\MusicReassignment.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\OpenSetFileForm.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\Progress.resx" />
@@ -425,7 +448,11 @@
     <EmbeddedResource Include="BanjoKazooieLevelEditor\SearchForm.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\SkyBoxReassignment.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\SkyboxScale.resx" />
-    <EmbeddedResource Include="BanjoKazooieLevelEditor\SNSEditor.resx" />
+    <EmbeddedResource Include="BanjoKazooieLevelEditor\SNSEditor.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SNSEditor.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Tool</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Include="BanjoKazooieLevelEditor\SpriteEditorForm.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\TextEditorForm.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\WarpDestinationForm.resx" />

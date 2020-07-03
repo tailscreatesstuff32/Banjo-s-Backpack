@@ -54,7 +54,7 @@ namespace BanjoKazooieLevelEditor
           "b",
           "c",
           "d",
-          nameof (e),
+          "e",
           "f"
         }).Contains<string>(e.KeyChar.ToString()) && e.KeyChar != '\b')
           e.Handled = true;
@@ -122,7 +122,7 @@ namespace BanjoKazooieLevelEditor
       this.FormBorderStyle = FormBorderStyle.FixedDialog;
       this.MaximizeBox = false;
       this.MinimizeBox = false;
-      this.Name = nameof (SkyboxScale);
+      this.Name = "SkyboxScale";
       this.ShowIcon = false;
       this.Text = "Skybox Scale";
       this.ResumeLayout(false);

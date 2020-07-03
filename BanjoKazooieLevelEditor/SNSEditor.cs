@@ -211,7 +211,7 @@ namespace BanjoKazooieLevelEditor
       this.label2.Size = new Size(75, 13);
       this.label2.TabIndex = 40;
       this.label2.Text = "Particle Colour";
-      this.colorPick_pbx.Image = (Image) componentResourceManager.GetObject("colorPick_pbx.Image");
+      this.colorPick_pbx.Image = (Image) Tool.SNSEditor.colorPick_pbx;
       this.colorPick_pbx.Location = new Point(19, 292);
       this.colorPick_pbx.Name = "colorPick_pbx";
       this.colorPick_pbx.Size = new Size(205, 84);
@@ -246,7 +246,7 @@ namespace BanjoKazooieLevelEditor
       this.Controls.Add((Control) this.items_lb);
       this.MaximizeBox = false;
       this.MinimizeBox = false;
-      this.Name = nameof (SNSEditor);
+      this.Name = "SNSEditor";
       this.ShowIcon = false;
       this.Text = "SNS Editor";
       ((ISupportInitialize) this.colorPick_pbx).EndInit();

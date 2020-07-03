@@ -103,7 +103,7 @@ namespace BanjoKazooieLevelEditor
       this.Controls.Add((Control) this.level_lb);
       this.MaximizeBox = false;
       this.MinimizeBox = false;
-      this.Name = nameof (SceneReassignmentForm);
+      this.Name = "SceneReassignmentForm";
       this.ShowIcon = false;
       this.Text = "Assign to Level...";
       this.ResumeLayout(false);

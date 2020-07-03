@@ -7118,7 +7118,7 @@ namespace BanjoKazooieLevelEditor
       this.pnlPreview.Name = "pnlPreview";
       this.pnlPreview.Size = new Size(190, 17);
       this.pnlPreview.TabIndex = 38;
-      this.colorPick_pbx.Image = (Image) componentResourceManager.GetObject("colorPick_pbx.Image");
+      this.colorPick_pbx.Image = Tool.ModelImportForm.colorPick_pbx;
       this.colorPick_pbx.Location = new Point(6, 19);
       this.colorPick_pbx.Name = "colorPick_pbx";
       this.colorPick_pbx.Size = new Size(199, 80);
@@ -7542,7 +7542,7 @@ namespace BanjoKazooieLevelEditor
       this.FormBorderStyle = FormBorderStyle.FixedDialog;
       this.MainMenuStrip = this.menuStrip1;
       this.MinimizeBox = false;
-      this.Name = nameof (ModelImportForm);
+      this.Name = "ModelImportForm";
       this.ShowIcon = false;
       this.Text = "Model Importer";
       this.FormClosing += new FormClosingEventHandler(this.ModelImportForm_FormClosing);
