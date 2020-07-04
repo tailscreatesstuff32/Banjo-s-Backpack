@@ -458,5 +458,8 @@
     <EmbeddedResource Include="BanjoKazooieLevelEditor\WarpDestinationForm.resx" />
     <EmbeddedResource Include="BanjoKazooieLevelEditor\WarpEntryPointForm.resx" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_btn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

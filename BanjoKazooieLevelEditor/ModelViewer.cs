@@ -1347,314 +1347,421 @@ namespace BanjoKazooieLevelEditor
 
     private void InitializeComponent()
     {
-      this.components = (IContainer) new Container();
-      ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof (ModelViewer));
-      this.menuStrip1 = new MenuStrip();
-      this.fileToolStripMenuItem = new ToolStripMenuItem();
-      this.loadReplacementModelToolStripMenuItem = new ToolStripMenuItem();
-      this.saveToolStripMenuItem = new ToolStripMenuItem();
-      this.exportToGeObjToolStripMenuItem = new ToolStripMenuItem();
-      this.exportToColladadaeToolStripMenuItem = new ToolStripMenuItem();
-      this.importColladadaeToolStripMenuItem = new ToolStripMenuItem();
-      this.timer1 = new System.Windows.Forms.Timer(this.components);
-      this.openFileDialog1 = new OpenFileDialog();
-      this.label4 = new Label();
-      this.CamSpeed_tb = new TrackBar();
-      this.folderBrowserDialog = new FolderBrowserDialog();
-      this.objects_dgv = new DataGridView();
-      this.levels_dgv = new DataGridView();
-      this.animation_dgv = new DataGridView();
-      this.animationPlayer_timer = new System.Windows.Forms.Timer(this.components);
-      this.frameNo_lbl = new Label();
-      this.panel1 = new Panel();
-      this.panel2 = new Panel();
-      this.fileInfo_lbl = new Label();
-      this.label1 = new Label();
-      this.fps_tb = new TextBox();
-      this.frame_spin = new NumericUpDown();
-      this.play_btn = new Button();
-      this.stop_btn = new Button();
-      this.frame_trackBar = new ColorTrackBar();
-      this.lbl_glVersion = new Label();
-      this.BKOpenGLC = new GLControl();
-      this.openFileDialog2 = new OpenFileDialog();
-      this.menuStrip1.SuspendLayout();
-      this.CamSpeed_tb.BeginInit();
-      ((ISupportInitialize) this.objects_dgv).BeginInit();
-      ((ISupportInitialize) this.levels_dgv).BeginInit();
-      ((ISupportInitialize) this.animation_dgv).BeginInit();
-      this.panel1.SuspendLayout();
-      this.panel2.SuspendLayout();
-      this.frame_spin.BeginInit();
-      this.SuspendLayout();
-      this.menuStrip1.BackColor = SystemColors.ActiveCaption;
-      this.menuStrip1.Items.AddRange(new ToolStripItem[1]
-      {
-        (ToolStripItem) this.fileToolStripMenuItem
-      });
-      this.menuStrip1.Location = new Point(0, 0);
-      this.menuStrip1.Name = "menuStrip1";
-      this.menuStrip1.Size = new Size(1180, 24);
-      this.menuStrip1.TabIndex = 11;
-      this.menuStrip1.Text = "menuStrip1";
-      this.fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[5]
-      {
-        (ToolStripItem) this.loadReplacementModelToolStripMenuItem,
-        (ToolStripItem) this.saveToolStripMenuItem,
-        (ToolStripItem) this.exportToGeObjToolStripMenuItem,
-        (ToolStripItem) this.exportToColladadaeToolStripMenuItem,
-        (ToolStripItem) this.importColladadaeToolStripMenuItem
-      });
-      this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-      this.fileToolStripMenuItem.Size = new Size(37, 20);
-      this.fileToolStripMenuItem.Text = "File";
-      this.loadReplacementModelToolStripMenuItem.Name = "loadReplacementModelToolStripMenuItem";
-      this.loadReplacementModelToolStripMenuItem.Size = new Size(209, 22);
-      this.loadReplacementModelToolStripMenuItem.Text = "Load Replacement Model";
-      this.loadReplacementModelToolStripMenuItem.Click += new EventHandler(this.loadReplacementModelToolStripMenuItem_Click);
-      this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-      this.saveToolStripMenuItem.Size = new Size(209, 22);
-      this.saveToolStripMenuItem.Text = "Save to Rom";
-      this.saveToolStripMenuItem.Click += new EventHandler(this.saveToolStripMenuItem_Click);
-      this.exportToGeObjToolStripMenuItem.Name = "exportToGeObjToolStripMenuItem";
-      this.exportToGeObjToolStripMenuItem.Size = new Size(209, 22);
-      this.exportToGeObjToolStripMenuItem.Text = "Export to geObj";
-      this.exportToGeObjToolStripMenuItem.Click += new EventHandler(this.exportToGeObjToolStripMenuItem_Click);
-      this.exportToColladadaeToolStripMenuItem.Name = "exportToColladadaeToolStripMenuItem";
-      this.exportToColladadaeToolStripMenuItem.Size = new Size(209, 22);
-      this.exportToColladadaeToolStripMenuItem.Text = "Export to Collada (.dae)";
-      this.exportToColladadaeToolStripMenuItem.Visible = false;
-      this.exportToColladadaeToolStripMenuItem.Click += new EventHandler(this.exportToColladadaeToolStripMenuItem_Click);
-      this.importColladadaeToolStripMenuItem.Name = "importColladadaeToolStripMenuItem";
-      this.importColladadaeToolStripMenuItem.Size = new Size(209, 22);
-      this.importColladadaeToolStripMenuItem.Text = "Import Collada (.dae)";
-      this.importColladadaeToolStripMenuItem.Visible = false;
-      this.importColladadaeToolStripMenuItem.Click += new EventHandler(this.importColladadaeToolStripMenuItem_Click);
-      this.timer1.Interval = 25;
-      this.timer1.Tick += new EventHandler(this.timer1_Tick);
-      this.openFileDialog1.Filter = "BK Model File|*.bin";
-      this.label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-      this.label4.AutoSize = true;
-      this.label4.BackColor = SystemColors.ActiveCaption;
-      this.label4.Location = new Point(945, 6);
-      this.label4.Name = "label4";
-      this.label4.Size = new Size(77, 13);
-      this.label4.TabIndex = 61;
-      this.label4.Text = "Camera Speed";
-      this.CamSpeed_tb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-      this.CamSpeed_tb.AutoSize = false;
-      this.CamSpeed_tb.BackColor = SystemColors.ActiveCaption;
-      this.CamSpeed_tb.Cursor = Cursors.Hand;
-      this.CamSpeed_tb.Location = new Point(1030, 2);
-      this.CamSpeed_tb.Maximum = 100;
-      this.CamSpeed_tb.Minimum = 5;
-      this.CamSpeed_tb.Name = "CamSpeed_tb";
-      this.CamSpeed_tb.Size = new Size(150, 19);
-      this.CamSpeed_tb.TabIndex = 60;
-      this.CamSpeed_tb.TickFrequency = 5;
-      this.CamSpeed_tb.Value = 30;
-      this.CamSpeed_tb.Scroll += new EventHandler(this.CamSpeed_tb_Scroll);
-      this.objects_dgv.AllowUserToAddRows = false;
-      this.objects_dgv.AllowUserToDeleteRows = false;
-      this.objects_dgv.AllowUserToResizeColumns = false;
-      this.objects_dgv.AllowUserToResizeRows = false;
-      this.objects_dgv.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-      this.objects_dgv.BackgroundColor = Color.White;
-      this.objects_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.objects_dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
-      this.objects_dgv.Location = new Point(12, 27);
-      this.objects_dgv.Name = "objects_dgv";
-      this.objects_dgv.ReadOnly = true;
-      this.objects_dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-      this.objects_dgv.Size = new Size(178, 308);
-      this.objects_dgv.TabIndex = 67;
-      this.objects_dgv.CellContentClick += new DataGridViewCellEventHandler(this.objects_dgv_CellContentClick);
-      this.objects_dgv.SelectionChanged += new EventHandler(this.objects_dgv_SelectionChanged);
-      this.levels_dgv.AllowUserToAddRows = false;
-      this.levels_dgv.AllowUserToDeleteRows = false;
-      this.levels_dgv.AllowUserToResizeColumns = false;
-      this.levels_dgv.AllowUserToResizeRows = false;
-      this.levels_dgv.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-      this.levels_dgv.BackgroundColor = Color.White;
-      this.levels_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.levels_dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
-      this.levels_dgv.Location = new Point(12, 341);
-      this.levels_dgv.Name = "levels_dgv";
-      this.levels_dgv.ReadOnly = true;
-      this.levels_dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-      this.levels_dgv.Size = new Size(178, 180);
-      this.levels_dgv.TabIndex = 68;
-      this.levels_dgv.SelectionChanged += new EventHandler(this.levels_dgv_SelectionChanged);
-      this.animation_dgv.AllowUserToAddRows = false;
-      this.animation_dgv.AllowUserToDeleteRows = false;
-      this.animation_dgv.AllowUserToResizeColumns = false;
-      this.animation_dgv.AllowUserToResizeRows = false;
-      this.animation_dgv.BackgroundColor = Color.FromArgb(114, 114, 114);
-      this.animation_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.animation_dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
-      this.animation_dgv.Location = new Point(3, 7);
-      this.animation_dgv.Name = "animation_dgv";
-      this.animation_dgv.ReadOnly = true;
-      this.animation_dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-      this.animation_dgv.Size = new Size(178, 107);
-      this.animation_dgv.TabIndex = 69;
-      this.animation_dgv.CellClick += new DataGridViewCellEventHandler(this.animation_dgv_CellClick);
-      this.animation_dgv.SelectionChanged += new EventHandler(this.animation_dgv_SelectionChanged);
-      this.animationPlayer_timer.Interval = 16;
-      this.animationPlayer_timer.Tick += new EventHandler(this.animationPlayer_timer_Tick);
-      this.frameNo_lbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-      this.frameNo_lbl.AutoSize = true;
-      this.frameNo_lbl.Location = new Point(3, 11);
-      this.frameNo_lbl.Name = "frameNo_lbl";
-      this.frameNo_lbl.Size = new Size(39, 13);
-      this.frameNo_lbl.TabIndex = 76;
-      this.frameNo_lbl.Text = "frame: ";
-      this.frameNo_lbl.Click += new EventHandler(this.frameNo_lbl_Click);
-      this.panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-      this.panel1.BackColor = Color.FromArgb(68, 68, 68);
-      this.panel1.Controls.Add((Control) this.panel2);
-      this.panel1.Controls.Add((Control) this.frame_trackBar);
-      this.panel1.Controls.Add((Control) this.animation_dgv);
-      this.panel1.Location = new Point(196, 401);
-      this.panel1.Name = "panel1";
-      this.panel1.Size = new Size(972, 120);
-      this.panel1.TabIndex = 77;
-      this.panel2.BackColor = Color.FromArgb(142, 142, 142);
-      this.panel2.Controls.Add((Control) this.fileInfo_lbl);
-      this.panel2.Controls.Add((Control) this.label1);
-      this.panel2.Controls.Add((Control) this.fps_tb);
-      this.panel2.Controls.Add((Control) this.frameNo_lbl);
-      this.panel2.Controls.Add((Control) this.frame_spin);
-      this.panel2.Controls.Add((Control) this.play_btn);
-      this.panel2.Controls.Add((Control) this.stop_btn);
-      this.panel2.Location = new Point(187, 85);
-      this.panel2.Name = "panel2";
-      this.panel2.Size = new Size(781, 29);
-      this.panel2.TabIndex = 79;
-      this.fileInfo_lbl.AutoSize = true;
-      this.fileInfo_lbl.Location = new Point(190, 8);
-      this.fileInfo_lbl.Name = "fileInfo_lbl";
-      this.fileInfo_lbl.Size = new Size(0, 13);
-      this.fileInfo_lbl.TabIndex = 81;
-      this.label1.AutoSize = true;
-      this.label1.Location = new Point(121, 11);
-      this.label1.Name = "label1";
-      this.label1.Size = new Size(27, 13);
-      this.label1.TabIndex = 80;
-      this.label1.Text = "FPS";
-      this.fps_tb.BackColor = Color.FromArgb(114, 114, 114);
-      this.fps_tb.ForeColor = SystemColors.Info;
-      this.fps_tb.Location = new Point(154, 6);
-      this.fps_tb.Name = "fps_tb";
-      this.fps_tb.Size = new Size(30, 20);
-      this.fps_tb.TabIndex = 79;
-      this.fps_tb.Text = "60";
-      this.fps_tb.TextChanged += new EventHandler(this.fps_tb_TextChanged);
-      this.fps_tb.KeyPress += new KeyPressEventHandler(this.fps_tb_KeyPress);
-      this.frame_spin.BackColor = Color.FromArgb(114, 114, 114);
-      this.frame_spin.BorderStyle = BorderStyle.FixedSingle;
-      this.frame_spin.ForeColor = SystemColors.Info;
-      this.frame_spin.Location = new Point(48, 6);
-      this.frame_spin.Name = "frame_spin";
-      this.frame_spin.Size = new Size(51, 20);
-      this.frame_spin.TabIndex = 78;
-      this.frame_spin.ValueChanged += new EventHandler(this.frame_spin_ValueChanged);
-      this.play_btn.Anchor = AnchorStyles.None;
-      this.play_btn.BackColor = Color.Transparent;
-      this.play_btn.BackgroundImageLayout = ImageLayout.None;
-      this.play_btn.FlatAppearance.BorderColor = Color.Black;
-      this.play_btn.FlatAppearance.BorderSize = 0;
-      this.play_btn.FlatStyle = FlatStyle.Flat;
-      this.play_btn.Image = (Image) Resources.play2;
-      this.play_btn.Location = new Point(720, 2);
-      this.play_btn.Name = "play_btn";
-      this.play_btn.Size = new Size(22, 22);
-      this.play_btn.TabIndex = 74;
-      this.play_btn.UseVisualStyleBackColor = false;
-      this.play_btn.Click += new EventHandler(this.play_btn_Click);
-      this.stop_btn.Anchor = AnchorStyles.None;
-      this.stop_btn.BackColor = Color.Transparent;
-      this.stop_btn.FlatAppearance.BorderSize = 0;
-      this.stop_btn.FlatStyle = FlatStyle.Flat;
-      this.stop_btn.Image = Tool.ModelViewer.stop_btn;
-      this.stop_btn.Location = new Point(745, 2);
-      this.stop_btn.Margin = new Padding(0);
-      this.stop_btn.Name = "stop_btn";
-      this.stop_btn.Size = new Size(22, 22);
-      this.stop_btn.TabIndex = 75;
-      this.stop_btn.UseVisualStyleBackColor = false;
-      this.stop_btn.Click += new EventHandler(this.stop_btn_Click);
-      this.frame_trackBar.BarBorderColor = Color.Black;
-      this.frame_trackBar.BarColor = Color.FromArgb(114, 114, 114);
-      this.frame_trackBar.Cursor = Cursors.Arrow;
-      this.frame_trackBar.Font = new Font("Microsoft Sans Serif", 7f, FontStyle.Regular, GraphicsUnit.Point, (byte) 0);
-      this.frame_trackBar.Location = new Point(187, 7);
-      this.frame_trackBar.Maximum = 100;
-      this.frame_trackBar.MaximumValueSide = Poles.Right;
-      this.frame_trackBar.Minimum = 0;
-      this.frame_trackBar.Name = "frame_trackBar";
-      this.frame_trackBar.Size = new Size(781, 72);
-      this.frame_trackBar.TabIndex = 77;
-      this.frame_trackBar.TrackerBorderColor = Color.Black;
-      this.frame_trackBar.TrackerColor = Color.Turquoise;
-      this.frame_trackBar.TrackerSize = 4;
-      this.frame_trackBar.Value = 0;
-      this.frame_trackBar.ValueChanged += new ColorTrackBar.ValueChangedEventHandler(this.frame_trackBar_ValueChanged);
-      this.lbl_glVersion.AutoSize = true;
-      this.lbl_glVersion.BackColor = SystemColors.ActiveCaption;
-      this.lbl_glVersion.ForeColor = Color.White;
-      this.lbl_glVersion.Location = new Point(193, 6);
-      this.lbl_glVersion.Name = "lbl_glVersion";
-      this.lbl_glVersion.Size = new Size(91, 13);
-      this.lbl_glVersion.TabIndex = 78;
-      this.lbl_glVersion.Text = "OpenGL Version: ";
-      this.BKOpenGLC.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-      this.BKOpenGLC.BackColor = Color.Black;
-      this.BKOpenGLC.Location = new Point(199, 27);
-      this.BKOpenGLC.Name = "BKOpenGLC";
-      this.BKOpenGLC.Size = new Size(969, 368);
-      this.BKOpenGLC.TabIndex = 79;
-      this.BKOpenGLC.VSync = false;
-      this.BKOpenGLC.Load += new EventHandler(this.BKOpenGLC_Load);
-      this.BKOpenGLC.KeyDown += new KeyEventHandler(this.BKOpenGLC_KeyDown);
-      this.BKOpenGLC.KeyUp += new KeyEventHandler(this.ModelViewer_KeyUp);
-      this.BKOpenGLC.MouseDown += new MouseEventHandler(this.BKOpenGLC_MouseDown);
-      this.BKOpenGLC.MouseMove += new MouseEventHandler(this.BKOpenGLC_MouseMove);
-      this.BKOpenGLC.MouseUp += new MouseEventHandler(this.BKOpenGLC_MouseUp);
-      this.openFileDialog2.FileName = "Model.dae";
-      this.openFileDialog2.Filter = "Model File|*.dae";
-      this.AutoScaleDimensions = new SizeF(6f, 13f);
-      this.AutoScaleMode = AutoScaleMode.Font;
-      this.ClientSize = new Size(1180, 522);
-      this.Controls.Add((Control) this.BKOpenGLC);
-      this.Controls.Add((Control) this.lbl_glVersion);
-      this.Controls.Add((Control) this.panel1);
-      this.Controls.Add((Control) this.levels_dgv);
-      this.Controls.Add((Control) this.objects_dgv);
-      this.Controls.Add((Control) this.label4);
-      this.Controls.Add((Control) this.CamSpeed_tb);
-      this.Controls.Add((Control) this.menuStrip1);
-      this.MainMenuStrip = this.menuStrip1;
-      this.Name = "ModelViewer";
-      this.ShowIcon = false;
-      this.Text = "Model Viewer";
-      this.FormClosing += new FormClosingEventHandler(this.ModelViewer_FormClosing);
-      this.Load += new EventHandler(this.ModelViewer_Load);
-      this.Shown += new EventHandler(this.ModelViewer_Shown);
-      this.SizeChanged += new EventHandler(this.ModelViewer_SizeChanged);
-      this.KeyUp += new KeyEventHandler(this.ModelViewer_KeyUp);
-      this.menuStrip1.ResumeLayout(false);
-      this.menuStrip1.PerformLayout();
-      this.CamSpeed_tb.EndInit();
-      ((ISupportInitialize) this.objects_dgv).EndInit();
-      ((ISupportInitialize) this.levels_dgv).EndInit();
-      ((ISupportInitialize) this.animation_dgv).EndInit();
-      this.panel1.ResumeLayout(false);
-      this.panel2.ResumeLayout(false);
-      this.panel2.PerformLayout();
-      this.frame_spin.EndInit();
-      this.ResumeLayout(false);
-      this.PerformLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModelViewer));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadReplacementModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToGeObjToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToColladadaeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importColladadaeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CamSpeed_tb = new System.Windows.Forms.TrackBar();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.objects_dgv = new System.Windows.Forms.DataGridView();
+            this.levels_dgv = new System.Windows.Forms.DataGridView();
+            this.animation_dgv = new System.Windows.Forms.DataGridView();
+            this.animationPlayer_timer = new System.Windows.Forms.Timer(this.components);
+            this.frameNo_lbl = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.fileInfo_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.fps_tb = new System.Windows.Forms.TextBox();
+            this.frame_spin = new System.Windows.Forms.NumericUpDown();
+            this.play_btn = new System.Windows.Forms.Button();
+            this.stop_btn = new System.Windows.Forms.Button();
+            this.frame_trackBar = new BanjoKazooieLevelEditor.ColorTrackBar();
+            this.lbl_glVersion = new System.Windows.Forms.Label();
+            this.BKOpenGLC = new OpenTK.GLControl();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CamSpeed_tb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objects_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levels_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animation_dgv)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frame_spin)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1573, 28);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadReplacementModelToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.exportToGeObjToolStripMenuItem,
+            this.exportToColladadaeToolStripMenuItem,
+            this.importColladadaeToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // loadReplacementModelToolStripMenuItem
+            // 
+            this.loadReplacementModelToolStripMenuItem.Name = "loadReplacementModelToolStripMenuItem";
+            this.loadReplacementModelToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.loadReplacementModelToolStripMenuItem.Text = "Load Replacement Model";
+            this.loadReplacementModelToolStripMenuItem.Click += new System.EventHandler(this.loadReplacementModelToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.saveToolStripMenuItem.Text = "Save to Rom";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // exportToGeObjToolStripMenuItem
+            // 
+            this.exportToGeObjToolStripMenuItem.Name = "exportToGeObjToolStripMenuItem";
+            this.exportToGeObjToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.exportToGeObjToolStripMenuItem.Text = "Export to geObj";
+            this.exportToGeObjToolStripMenuItem.Click += new System.EventHandler(this.exportToGeObjToolStripMenuItem_Click);
+            // 
+            // exportToColladadaeToolStripMenuItem
+            // 
+            this.exportToColladadaeToolStripMenuItem.Name = "exportToColladadaeToolStripMenuItem";
+            this.exportToColladadaeToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.exportToColladadaeToolStripMenuItem.Text = "Export to Collada (.dae)";
+            this.exportToColladadaeToolStripMenuItem.Visible = false;
+            this.exportToColladadaeToolStripMenuItem.Click += new System.EventHandler(this.exportToColladadaeToolStripMenuItem_Click);
+            // 
+            // importColladadaeToolStripMenuItem
+            // 
+            this.importColladadaeToolStripMenuItem.Name = "importColladadaeToolStripMenuItem";
+            this.importColladadaeToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.importColladadaeToolStripMenuItem.Text = "Import Collada (.dae)";
+            this.importColladadaeToolStripMenuItem.Visible = false;
+            this.importColladadaeToolStripMenuItem.Click += new System.EventHandler(this.importColladadaeToolStripMenuItem_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 25;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = "BK Model File|*.bin";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(1260, 7);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 17);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Camera Speed";
+            // 
+            // CamSpeed_tb
+            // 
+            this.CamSpeed_tb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CamSpeed_tb.AutoSize = false;
+            this.CamSpeed_tb.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CamSpeed_tb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CamSpeed_tb.Location = new System.Drawing.Point(1373, 2);
+            this.CamSpeed_tb.Margin = new System.Windows.Forms.Padding(4);
+            this.CamSpeed_tb.Maximum = 100;
+            this.CamSpeed_tb.Minimum = 5;
+            this.CamSpeed_tb.Name = "CamSpeed_tb";
+            this.CamSpeed_tb.Size = new System.Drawing.Size(200, 23);
+            this.CamSpeed_tb.TabIndex = 60;
+            this.CamSpeed_tb.TickFrequency = 5;
+            this.CamSpeed_tb.Value = 30;
+            this.CamSpeed_tb.Scroll += new System.EventHandler(this.CamSpeed_tb_Scroll);
+            // 
+            // objects_dgv
+            // 
+            this.objects_dgv.AllowUserToAddRows = false;
+            this.objects_dgv.AllowUserToDeleteRows = false;
+            this.objects_dgv.AllowUserToResizeColumns = false;
+            this.objects_dgv.AllowUserToResizeRows = false;
+            this.objects_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.objects_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.objects_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.objects_dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.objects_dgv.Location = new System.Drawing.Point(16, 33);
+            this.objects_dgv.Margin = new System.Windows.Forms.Padding(4);
+            this.objects_dgv.Name = "objects_dgv";
+            this.objects_dgv.ReadOnly = true;
+            this.objects_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.objects_dgv.Size = new System.Drawing.Size(237, 379);
+            this.objects_dgv.TabIndex = 67;
+            this.objects_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.objects_dgv_CellContentClick);
+            this.objects_dgv.SelectionChanged += new System.EventHandler(this.objects_dgv_SelectionChanged);
+            // 
+            // levels_dgv
+            // 
+            this.levels_dgv.AllowUserToAddRows = false;
+            this.levels_dgv.AllowUserToDeleteRows = false;
+            this.levels_dgv.AllowUserToResizeColumns = false;
+            this.levels_dgv.AllowUserToResizeRows = false;
+            this.levels_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.levels_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.levels_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.levels_dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.levels_dgv.Location = new System.Drawing.Point(16, 420);
+            this.levels_dgv.Margin = new System.Windows.Forms.Padding(4);
+            this.levels_dgv.Name = "levels_dgv";
+            this.levels_dgv.ReadOnly = true;
+            this.levels_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.levels_dgv.Size = new System.Drawing.Size(237, 222);
+            this.levels_dgv.TabIndex = 68;
+            this.levels_dgv.SelectionChanged += new System.EventHandler(this.levels_dgv_SelectionChanged);
+            // 
+            // animation_dgv
+            // 
+            this.animation_dgv.AllowUserToAddRows = false;
+            this.animation_dgv.AllowUserToDeleteRows = false;
+            this.animation_dgv.AllowUserToResizeColumns = false;
+            this.animation_dgv.AllowUserToResizeRows = false;
+            this.animation_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.animation_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.animation_dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.animation_dgv.Location = new System.Drawing.Point(4, 9);
+            this.animation_dgv.Margin = new System.Windows.Forms.Padding(4);
+            this.animation_dgv.Name = "animation_dgv";
+            this.animation_dgv.ReadOnly = true;
+            this.animation_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.animation_dgv.Size = new System.Drawing.Size(237, 132);
+            this.animation_dgv.TabIndex = 69;
+            this.animation_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.animation_dgv_CellClick);
+            this.animation_dgv.SelectionChanged += new System.EventHandler(this.animation_dgv_SelectionChanged);
+            // 
+            // animationPlayer_timer
+            // 
+            this.animationPlayer_timer.Interval = 16;
+            this.animationPlayer_timer.Tick += new System.EventHandler(this.animationPlayer_timer_Tick);
+            // 
+            // frameNo_lbl
+            // 
+            this.frameNo_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.frameNo_lbl.AutoSize = true;
+            this.frameNo_lbl.Location = new System.Drawing.Point(4, 14);
+            this.frameNo_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.frameNo_lbl.Name = "frameNo_lbl";
+            this.frameNo_lbl.Size = new System.Drawing.Size(52, 17);
+            this.frameNo_lbl.TabIndex = 76;
+            this.frameNo_lbl.Text = "frame: ";
+            this.frameNo_lbl.Click += new System.EventHandler(this.frameNo_lbl_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.frame_trackBar);
+            this.panel1.Controls.Add(this.animation_dgv);
+            this.panel1.Location = new System.Drawing.Point(261, 494);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1296, 148);
+            this.panel1.TabIndex = 77;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.panel2.Controls.Add(this.fileInfo_lbl);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.fps_tb);
+            this.panel2.Controls.Add(this.frameNo_lbl);
+            this.panel2.Controls.Add(this.frame_spin);
+            this.panel2.Controls.Add(this.play_btn);
+            this.panel2.Controls.Add(this.stop_btn);
+            this.panel2.Location = new System.Drawing.Point(249, 105);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1041, 36);
+            this.panel2.TabIndex = 79;
+            // 
+            // fileInfo_lbl
+            // 
+            this.fileInfo_lbl.AutoSize = true;
+            this.fileInfo_lbl.Location = new System.Drawing.Point(253, 10);
+            this.fileInfo_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fileInfo_lbl.Name = "fileInfo_lbl";
+            this.fileInfo_lbl.Size = new System.Drawing.Size(0, 17);
+            this.fileInfo_lbl.TabIndex = 81;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(161, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 17);
+            this.label1.TabIndex = 80;
+            this.label1.Text = "FPS";
+            // 
+            // fps_tb
+            // 
+            this.fps_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.fps_tb.ForeColor = System.Drawing.SystemColors.Info;
+            this.fps_tb.Location = new System.Drawing.Point(205, 7);
+            this.fps_tb.Margin = new System.Windows.Forms.Padding(4);
+            this.fps_tb.Name = "fps_tb";
+            this.fps_tb.Size = new System.Drawing.Size(39, 22);
+            this.fps_tb.TabIndex = 79;
+            this.fps_tb.Text = "60";
+            this.fps_tb.TextChanged += new System.EventHandler(this.fps_tb_TextChanged);
+            this.fps_tb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fps_tb_KeyPress);
+            // 
+            // frame_spin
+            // 
+            this.frame_spin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.frame_spin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.frame_spin.ForeColor = System.Drawing.SystemColors.Info;
+            this.frame_spin.Location = new System.Drawing.Point(64, 7);
+            this.frame_spin.Margin = new System.Windows.Forms.Padding(4);
+            this.frame_spin.Name = "frame_spin";
+            this.frame_spin.Size = new System.Drawing.Size(68, 22);
+            this.frame_spin.TabIndex = 78;
+            this.frame_spin.ValueChanged += new System.EventHandler(this.frame_spin_ValueChanged);
+            // 
+            // play_btn
+            // 
+            this.play_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.play_btn.BackColor = System.Drawing.Color.Transparent;
+            this.play_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.play_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.play_btn.FlatAppearance.BorderSize = 0;
+            this.play_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.play_btn.Image = global::BanjoKazooieLevelEditor.Properties.Resources.play2;
+            this.play_btn.Location = new System.Drawing.Point(960, 2);
+            this.play_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.play_btn.Name = "play_btn";
+            this.play_btn.Size = new System.Drawing.Size(29, 27);
+            this.play_btn.TabIndex = 74;
+            this.play_btn.UseVisualStyleBackColor = false;
+            this.play_btn.Click += new System.EventHandler(this.play_btn_Click);
+            // 
+            // stop_btn
+            // 
+            this.stop_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stop_btn.BackColor = System.Drawing.Color.Transparent;
+            this.stop_btn.FlatAppearance.BorderSize = 0;
+            this.stop_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stop_btn.Image = ((System.Drawing.Image)(resources.GetObject("stop_btn.Image")));
+            this.stop_btn.Location = new System.Drawing.Point(993, 2);
+            this.stop_btn.Margin = new System.Windows.Forms.Padding(0);
+            this.stop_btn.Name = "stop_btn";
+            this.stop_btn.Size = new System.Drawing.Size(29, 27);
+            this.stop_btn.TabIndex = 75;
+            this.stop_btn.UseVisualStyleBackColor = false;
+            this.stop_btn.Click += new System.EventHandler(this.stop_btn_Click);
+            // 
+            // frame_trackBar
+            // 
+            this.frame_trackBar.BarBorderColor = System.Drawing.Color.Black;
+            this.frame_trackBar.BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.frame_trackBar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.frame_trackBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frame_trackBar.Location = new System.Drawing.Point(249, 9);
+            this.frame_trackBar.Margin = new System.Windows.Forms.Padding(4);
+            this.frame_trackBar.Maximum = 100;
+            this.frame_trackBar.MaximumValueSide = BanjoKazooieLevelEditor.Poles.Right;
+            this.frame_trackBar.Minimum = 0;
+            this.frame_trackBar.Name = "frame_trackBar";
+            this.frame_trackBar.Size = new System.Drawing.Size(1041, 89);
+            this.frame_trackBar.TabIndex = 77;
+            this.frame_trackBar.TrackerBorderColor = System.Drawing.Color.Black;
+            this.frame_trackBar.TrackerColor = System.Drawing.Color.Turquoise;
+            this.frame_trackBar.TrackerSize = 4;
+            this.frame_trackBar.Value = 0;
+            this.frame_trackBar.ValueChanged += new BanjoKazooieLevelEditor.ColorTrackBar.ValueChangedEventHandler(this.frame_trackBar_ValueChanged);
+            // 
+            // lbl_glVersion
+            // 
+            this.lbl_glVersion.AutoSize = true;
+            this.lbl_glVersion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_glVersion.ForeColor = System.Drawing.Color.White;
+            this.lbl_glVersion.Location = new System.Drawing.Point(257, 7);
+            this.lbl_glVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_glVersion.Name = "lbl_glVersion";
+            this.lbl_glVersion.Size = new System.Drawing.Size(122, 17);
+            this.lbl_glVersion.TabIndex = 78;
+            this.lbl_glVersion.Text = "OpenGL Version: ";
+            // 
+            // BKOpenGLC
+            // 
+            this.BKOpenGLC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BKOpenGLC.BackColor = System.Drawing.Color.Black;
+            this.BKOpenGLC.Location = new System.Drawing.Point(265, 33);
+            this.BKOpenGLC.Margin = new System.Windows.Forms.Padding(5);
+            this.BKOpenGLC.Name = "BKOpenGLC";
+            this.BKOpenGLC.Size = new System.Drawing.Size(1292, 453);
+            this.BKOpenGLC.TabIndex = 79;
+            this.BKOpenGLC.VSync = false;
+            this.BKOpenGLC.Load += new System.EventHandler(this.BKOpenGLC_Load);
+            this.BKOpenGLC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BKOpenGLC_KeyDown);
+            this.BKOpenGLC.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ModelViewer_KeyUp);
+            this.BKOpenGLC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BKOpenGLC_MouseDown);
+            this.BKOpenGLC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BKOpenGLC_MouseMove);
+            this.BKOpenGLC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BKOpenGLC_MouseUp);
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "Model.dae";
+            this.openFileDialog2.Filter = "Model File|*.dae";
+            // 
+            // ModelViewer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1573, 642);
+            this.Controls.Add(this.BKOpenGLC);
+            this.Controls.Add(this.lbl_glVersion);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.levels_dgv);
+            this.Controls.Add(this.objects_dgv);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CamSpeed_tb);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ModelViewer";
+            this.ShowIcon = false;
+            this.Text = "Model Viewer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModelViewer_FormClosing);
+            this.Load += new System.EventHandler(this.ModelViewer_Load);
+            this.Shown += new System.EventHandler(this.ModelViewer_Shown);
+            this.SizeChanged += new System.EventHandler(this.ModelViewer_SizeChanged);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ModelViewer_KeyUp);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CamSpeed_tb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objects_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levels_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animation_dgv)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frame_spin)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
     }
   }
 }

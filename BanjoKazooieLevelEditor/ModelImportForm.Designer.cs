@@ -63,10 +63,60 @@ namespace Tool {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap colorPick_pbx {
+        public static System.Drawing.Bitmap colorPick_pbx_Image {
             get {
-                object obj = ResourceManager.GetObject("colorPick_pbx", resourceCulture);
+                object obj = ResourceManager.GetObject("colorPick_pbx.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=447,Y=17}.
+        /// </summary>
+        public static System.Drawing.Point menuStrip1_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("menuStrip1.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=582,Y=17}.
+        /// </summary>
+        public static System.Drawing.Point openFD_bin_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("openFD_bin.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=179,Y=17}.
+        /// </summary>
+        public static System.Drawing.Point openFileDialog1_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("openFileDialog1.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=17}.
+        /// </summary>
+        public static System.Drawing.Point saveFileDialog1_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("saveFileDialog1.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=346,Y=17}.
+        /// </summary>
+        public static System.Drawing.Point timer1_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("timer1.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
             }
         }
     }
