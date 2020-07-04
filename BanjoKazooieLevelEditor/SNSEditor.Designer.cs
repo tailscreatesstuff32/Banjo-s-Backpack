@@ -63,9 +63,9 @@ namespace Tool {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap colorPick_pbx {
+        public static System.Drawing.Bitmap colorPick_pbx_Image {
             get {
-                object obj = ResourceManager.GetObject("colorPick_pbx", resourceCulture);
+                object obj = ResourceManager.GetObject("colorPick_pbx.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

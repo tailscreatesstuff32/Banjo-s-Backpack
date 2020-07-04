@@ -156,102 +156,149 @@ namespace BanjoKazooieLevelEditor
 
     private void InitializeComponent()
     {
-      ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof (SNSEditor));
-      this.level_lb = new ListBox();
-      this.label3 = new Label();
-      this.update_btn = new Button();
-      this.label1 = new Label();
-      this.items_lb = new ListBox();
-      this.particle_pnl = new Panel();
-      this.label2 = new Label();
-      this.colorPick_pbx = new PictureBox();
-      this.lbl4 = new Label();
-      this.unknown_tb = new TextBox();
-      ((ISupportInitialize) this.colorPick_pbx).BeginInit();
-      this.SuspendLayout();
-      this.level_lb.FormattingEnabled = true;
-      this.level_lb.Location = new Point(261, 36);
-      this.level_lb.Name = "level_lb";
-      this.level_lb.Size = new Size(205, 316);
-      this.level_lb.TabIndex = 12;
-      this.label3.AutoSize = true;
-      this.label3.Location = new Point(16, 20);
-      this.label3.Name = "label3";
-      this.label3.Size = new Size(27, 13);
-      this.label3.TabIndex = 11;
-      this.label3.Text = "Item";
-      this.update_btn.Location = new Point(475, 36);
-      this.update_btn.Name = "update_btn";
-      this.update_btn.Size = new Size(75, 23);
-      this.update_btn.TabIndex = 10;
-      this.update_btn.Text = "Update";
-      this.update_btn.UseVisualStyleBackColor = true;
-      this.update_btn.Click += new EventHandler(this.update_btn_Click);
-      this.label1.AutoSize = true;
-      this.label1.Location = new Point(258, 20);
-      this.label1.Name = "label1";
-      this.label1.Size = new Size(33, 13);
-      this.label1.TabIndex = 9;
-      this.label1.Text = "Level";
-      this.items_lb.FormattingEnabled = true;
-      this.items_lb.Location = new Point(17, 36);
-      this.items_lb.Name = "items_lb";
-      this.items_lb.Size = new Size(205, 199);
-      this.items_lb.TabIndex = 8;
-      this.items_lb.SelectedIndexChanged += new EventHandler(this.items_lb_SelectedIndexChanged);
-      this.particle_pnl.BackColor = Color.White;
-      this.particle_pnl.BorderStyle = BorderStyle.FixedSingle;
-      this.particle_pnl.Location = new Point(19, 254);
-      this.particle_pnl.Name = "particle_pnl";
-      this.particle_pnl.Size = new Size(203, 32);
-      this.particle_pnl.TabIndex = 39;
-      this.label2.AutoSize = true;
-      this.label2.Location = new Point(16, 238);
-      this.label2.Name = "label2";
-      this.label2.Size = new Size(75, 13);
-      this.label2.TabIndex = 40;
-      this.label2.Text = "Particle Colour";
-      this.colorPick_pbx.Image = (Image) Tool.SNSEditor.colorPick_pbx;
-      this.colorPick_pbx.Location = new Point(19, 292);
-      this.colorPick_pbx.Name = "colorPick_pbx";
-      this.colorPick_pbx.Size = new Size(205, 84);
-      this.colorPick_pbx.SizeMode = PictureBoxSizeMode.StretchImage;
-      this.colorPick_pbx.TabIndex = 41;
-      this.colorPick_pbx.TabStop = false;
-      this.colorPick_pbx.MouseMove += new MouseEventHandler(this.colorPick_pbx_MouseMove);
-      this.colorPick_pbx.MouseDown += new MouseEventHandler(this.colorPick_pbx_MouseDown);
-      this.colorPick_pbx.MouseUp += new MouseEventHandler(this.colorPick_pbx_MouseUp);
-      this.lbl4.AutoSize = true;
-      this.lbl4.Location = new Point(258, 365);
-      this.lbl4.Name = "lbl4";
-      this.lbl4.Size = new Size(56, 13);
-      this.lbl4.TabIndex = 42;
-      this.lbl4.Text = "Unknown:";
-      this.unknown_tb.Location = new Point(366, 362);
-      this.unknown_tb.Name = "unknown_tb";
-      this.unknown_tb.Size = new Size(100, 20);
-      this.unknown_tb.TabIndex = 43;
-      this.AutoScaleDimensions = new SizeF(6f, 13f);
-      this.AutoScaleMode = AutoScaleMode.Font;
-      this.ClientSize = new Size(562, 394);
-      this.Controls.Add((Control) this.unknown_tb);
-      this.Controls.Add((Control) this.lbl4);
-      this.Controls.Add((Control) this.colorPick_pbx);
-      this.Controls.Add((Control) this.label2);
-      this.Controls.Add((Control) this.particle_pnl);
-      this.Controls.Add((Control) this.level_lb);
-      this.Controls.Add((Control) this.label3);
-      this.Controls.Add((Control) this.update_btn);
-      this.Controls.Add((Control) this.label1);
-      this.Controls.Add((Control) this.items_lb);
-      this.MaximizeBox = false;
-      this.MinimizeBox = false;
-      this.Name = "SNSEditor";
-      this.ShowIcon = false;
-      this.Text = "SNS Editor";
-      ((ISupportInitialize) this.colorPick_pbx).EndInit();
-      this.ResumeLayout(false);
-      this.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SNSEditor));
+            this.level_lb = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.update_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.items_lb = new System.Windows.Forms.ListBox();
+            this.particle_pnl = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.colorPick_pbx = new System.Windows.Forms.PictureBox();
+            this.lbl4 = new System.Windows.Forms.Label();
+            this.unknown_tb = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.colorPick_pbx)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // level_lb
+            // 
+            this.level_lb.FormattingEnabled = true;
+            this.level_lb.ItemHeight = 16;
+            this.level_lb.Location = new System.Drawing.Point(348, 44);
+            this.level_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.level_lb.Name = "level_lb";
+            this.level_lb.Size = new System.Drawing.Size(272, 388);
+            this.level_lb.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Item";
+            // 
+            // update_btn
+            // 
+            this.update_btn.Location = new System.Drawing.Point(633, 44);
+            this.update_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(100, 28);
+            this.update_btn.TabIndex = 10;
+            this.update_btn.Text = "Update";
+            this.update_btn.UseVisualStyleBackColor = true;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(344, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Level";
+            // 
+            // items_lb
+            // 
+            this.items_lb.FormattingEnabled = true;
+            this.items_lb.ItemHeight = 16;
+            this.items_lb.Location = new System.Drawing.Point(23, 44);
+            this.items_lb.Margin = new System.Windows.Forms.Padding(4);
+            this.items_lb.Name = "items_lb";
+            this.items_lb.Size = new System.Drawing.Size(272, 244);
+            this.items_lb.TabIndex = 8;
+            this.items_lb.SelectedIndexChanged += new System.EventHandler(this.items_lb_SelectedIndexChanged);
+            // 
+            // particle_pnl
+            // 
+            this.particle_pnl.BackColor = System.Drawing.Color.White;
+            this.particle_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.particle_pnl.Location = new System.Drawing.Point(25, 313);
+            this.particle_pnl.Margin = new System.Windows.Forms.Padding(4);
+            this.particle_pnl.Name = "particle_pnl";
+            this.particle_pnl.Size = new System.Drawing.Size(270, 39);
+            this.particle_pnl.TabIndex = 39;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 293);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 17);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Particle Colour";
+            // 
+            // colorPick_pbx
+            // 
+            this.colorPick_pbx.Image = ((System.Drawing.Image)(resources.GetObject("colorPick_pbx.Image")));
+            this.colorPick_pbx.Location = new System.Drawing.Point(25, 359);
+            this.colorPick_pbx.Margin = new System.Windows.Forms.Padding(4);
+            this.colorPick_pbx.Name = "colorPick_pbx";
+            this.colorPick_pbx.Size = new System.Drawing.Size(273, 103);
+            this.colorPick_pbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.colorPick_pbx.TabIndex = 41;
+            this.colorPick_pbx.TabStop = false;
+            this.colorPick_pbx.MouseDown += new System.Windows.Forms.MouseEventHandler(this.colorPick_pbx_MouseDown);
+            this.colorPick_pbx.MouseMove += new System.Windows.Forms.MouseEventHandler(this.colorPick_pbx_MouseMove);
+            this.colorPick_pbx.MouseUp += new System.Windows.Forms.MouseEventHandler(this.colorPick_pbx_MouseUp);
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.Location = new System.Drawing.Point(344, 449);
+            this.lbl4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(70, 17);
+            this.lbl4.TabIndex = 42;
+            this.lbl4.Text = "Unknown:";
+            // 
+            // unknown_tb
+            // 
+            this.unknown_tb.Location = new System.Drawing.Point(488, 446);
+            this.unknown_tb.Margin = new System.Windows.Forms.Padding(4);
+            this.unknown_tb.Name = "unknown_tb";
+            this.unknown_tb.Size = new System.Drawing.Size(132, 22);
+            this.unknown_tb.TabIndex = 43;
+            // 
+            // SNSEditor
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(749, 485);
+            this.Controls.Add(this.unknown_tb);
+            this.Controls.Add(this.lbl4);
+            this.Controls.Add(this.colorPick_pbx);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.particle_pnl);
+            this.Controls.Add(this.level_lb);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.update_btn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.items_lb);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "SNSEditor";
+            this.ShowIcon = false;
+            this.Text = "SNS Editor";
+            ((System.ComponentModel.ISupportInitialize)(this.colorPick_pbx)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
     }
   }
 }

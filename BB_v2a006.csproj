@@ -461,5 +461,8 @@
   <ItemGroup>
     <None Include="Resources\stop_btn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorPick_pbx.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
